@@ -1,6 +1,38 @@
 // check if device dimension is on mobile view
 const isMobile = window.innerWidth <= 600;
 
+//render hamburger menu once in mobile device dimensions
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('primary-navigation');
+    const navLinks = document.querySelectorAll('#primary-navigation li');
+
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+
+        // Update ARIA state for accessibility
+        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // Scroll to section and hide nav when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const targetId = link.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            navMenu.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', false);
+        });
+    });
+});
+// end
+
 //custom cursor background that follows along
 const customCursor = document.getElementById('customCursor');
 // Move the cursor
