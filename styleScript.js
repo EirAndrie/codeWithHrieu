@@ -106,7 +106,7 @@ ScrollTrigger.matchMedia({
 
         const videoSources = [
             "media/novelNookProjectDemo.mp4",
-            "media/SNMMSIProjectDemoVideo.mp4"
+            "./SNMMSIProjectDemoVideo.mp4"
         ];
 
         const projectUrls = [
