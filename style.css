@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; /* dark background */
+    font-family: sans-serif;
+    font-size: 1rem; /* base font size for scaling */
+    height: 100vh;
+}
+
+@media (max-width: 480px) {
+    *, htmo, body {
+        overflow-x: hidden;
+        max-width: 480px;
+    }
+}
+
+
+#customCursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: white;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: background 0.2s, mix-blend-mode 0.2s;
+    mix-blend-mode: difference;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.sectionOne {
+    padding-bottom: 16rem;
+}
+
+/* Header styling */
+header {
+    position: relative;
+    padding: 2rem; /* responsive padding */
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Website title on the top-left */
+.websiteTitle {
+    color: white;
+    font-size: 1.125rem; /* ~18px */
+    font-weight: 300; /* "thin" isn't valid; use numeric value */
+    padding-left: 12rem;
+    cursor: default;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    padding: 0;
+}
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Nav buttons on top-right */
+.navButtons {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem; /* space between buttons */
+    padding-right: 12rem;
+}
+
+/* Individual nav items */
+.navButtons li {
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navButtons li:hover {
+    color: #ddd;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 480px) {
+    .sectionOne {
+        margin-bottom: -100px;
+    }
+
+    #customCursor {
+        opacity: 0;
+    }
+
+    header {
+        padding: 0px;
+        padding-top: 24px;
+    }
+    
+    .websiteTitle {
+        padding-left: 16px;
+        font-size: 12px;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger button on mobile */
+        margin-right: 18px;
+    }
+
+    .navButtons {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #000;
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem;
+        gap: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 0.75rem 0.75rem;
+        transform-origin: top;
+        transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 999;
+    }
+
+    .navButtons.open {
+        max-height: 400px; /* large enough to show all items */
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+/* Introduction statement section */
+
+.introductionStatement {
+    position: relative;
+    margin: 12rem 0 0 14rem;
+    width: 58rem;
+    max-width: 60rem;
+    max-height: 30.437rem;
+    cursor: default;
+}
+
+.introductionStatement p:nth-child(1) {
+    color: #fff;
+    font-size: 1.625rem;
+}
+
+.introductionStatement p:nth-child(2) {
+    color: #fff;
+    font-size: 7.8rem;
+    margin-top: 5rem;
+}
+
+.introductionStatement p:nth-child(3) {
+    color: #fff;
+    font-size: 1.375rem;
+    margin-top: 1.8rem;
+}
+
+/* Display my portfolio image */
+
+.imageContainer {
+    position: relative;
+    width: 33.5rem;
+    height: 36rem;
+    border-radius: 12px;
+    right: 14rem;
+    margin: -32rem 0 0 auto;
+    margin-right: 0rem;
+}
+
+.portfolioImage {
+    width: 33.5rem;
+    height: 36rem;
+    border-radius: 12px;
+}
+
+@media (max-width: 480px) { /* styles for mobile responsiveness on section 1 */
+    .introductionStatement {
+        margin-left: 16px;
+        margin-top: 10em;
+        width: 361px;
+        height: 240px;
+    }
+
+    .introductionStatement p:nth-child(1) {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .introductionStatement p:nth-child(2) {
+        color: #fff;
+        font-size: 45px;
+        margin-top: 8px;
+    }
+
+    .introductionStatement p:nth-child(3) {
+        color: #fff;
+        font-size: 12px;
+        margin-top: -20px;
+    }
+
+    .imageContainer {
+        overflow: hidden;
+        width: 386px;
+        height: 240px;
+        margin-left: 14.8rem;
+        margin-top: 10px;
+    }
+
+    .imageContainer img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
+    }
+}
+
+/* Display Section 2 base design */
+
+.sectionTwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 14rem;
+    padding-right: 14rem;
+    background-color: #000;
+    min-height: 104vh;
+    gap: 2rem;
+    cursor: default;
+}
+
+.aboutMeTitle p {
+    color: white;
+    font-size: 8.5rem;
+    font-weight: 100;
+    margin-top: 24rem;
+}
+
+.aboutMeDescription {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    width: 44.5rem;
+    height: 30.8125rem;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.quoteRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* spacing between lines and text */
+    margin: 2rem 0;
+}
+
+.customLine {
+    width: 28rem;
+    flex: none;
+    height: 1px;
+    background-color: white;
+    opacity: 0.3;
+    margin-top: 12rem;
+}
+
+.quote p {
+    color: white;
+    font-style: italic;
+    font-size: 1rem;
+    white-space: nowrap; /* keep on one line */
+    margin-top: 12rem;
+}
+
+@media (max-width: 480px) { /* Style for mobile responsivesness section 2*/
+    .sectionTwo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        margin-top: 4rem;
+    }
+
+    .aboutMeTitle p {
+        margin-top: 0;
+        font-size: 48px;
+    }
+
+    .aboutMeDescription {
+        margin-top: -2rem;
+        font-size: 16px;
+        width: 380px;
+        height: auto;
+    }
+
+    .quoteRow, .customLine {
+        visibility: hidden;
+    }
+}
+
+/* Display Section 3 base design */
+
+.sectionThree {
+    height: 140vh;
+    background-color: #000;
+    padding-top: 14rem;
+    padding-left: 14rem;
+    padding-right: 14rem;
+    cursor: default;
+    margin-top: 10rem;
+}
+
+.projectTitle p {
+    color: white;
+    font-size: 6.5rem;
+}
+
+.projectsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* space between projects */
+    margin-top: 2rem;
+}
+
+.projectCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #666;
+    padding-top: 2rem;
+    color: #ffff;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.projectInfo {
+    max-width: 70%;
+    color: white;
+}
+
+.projectInfo p:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.projectInfo i {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.hoverPreview {
+    position: absolute; /* Change to fixed */
+    width: 32rem; /* Adjust as necessary */
+    height: auto;
+    pointer-events: none;
+    opacity: 0; /* Start hidden */
+    z-index: 999; /* Ensure it appears above other elements */
+    transition: opacity 0.2s ease; /* Smooth transition for opacity */
+    border-radius: 4px; /* Optional: rounded corners */
+    transform: translate(-50%, -50%); /* Center the video */
+    cursor: pointer;
+}
+
+.projectInfo p:nth-child(2) {
+    font-size: 1.25rem;
+    font-weight: 100;
+}
+
+.projectDate {
+    color: white;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+@media (max-width: 480px) { /* Section 3 responsiveness design */
+    .sectionThree {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin-top: -18rem;
+    }
+
+    .projectsWrapper {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .projectCard {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 16px 16px 0 16px;
+    }
+
+    .projectTitle p {
+        font-size: 48px;
+    }
+
+    .projectInfo {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .projectInfo p:nth-child(1) {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .projectInfo i {
+        font-size: 12px;
+    }
+
+    .projectInfo p:nth-child(2) {
+        font-size: 12px;
+    }
+
+    .hoverPreview {
+        visibility: hidden;
+    }
+
+    .projectDate {
+        font-size: 14px;
+        align-self: flex-start;
+        margin-top: 14px;
+        margin-left: 0;
+    }
+}
+
+/* Section 4 for contact details and footer base design */
+
+.sectionFour {
+    background-color: #000;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    justify-content: center;
+    align-items: center;     /* Center horizontally */
+    text-align: center;
+    margin-top: 20rem;
+}
+
+.contactInvitationWrapper {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contactInvitationWrapper p:nth-child(1) {
+    font-size: 5.5rem;
+}
+
+.contactInvitationWrapper p:nth-child(2) {
+    font-size: 1.5rem;
+    line-height: 0.1;
+}
+
+.contactInvitationWrapper p:nth-child(3) {
+    font-size: 1.5rem;
+    line-height: 0.1;
+}
+
+.contactInvitationWrapper p:nth-child(4) {
+    font-size: 1.5rem;
+    line-height: 0.1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Footer style */
+.footer {
+    margin-top: 2rem;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 20rem;
+}
+
+.footer p:nth-child(1) {
+    font-size: 1rem;
+}
+
+.footer p:nth-child(2) {
+    font-size: 1rem;
+}
+
+.footer p:nth-child(3) {
+    font-size: 1rem;
+}
+
+@media (max-width: 480px) { /* Section 4 responsiveness design */
+    .sectionFour {
+        margin-top: 0;              /* Remove negative margin */
+        padding: 3rem 1rem 2rem;    /* Add spacing inside */
+        overflow: visible;          /* Ensure content isn't clipped */
+        height: auto;
+        overflow: hidden;
+    }
+
+    .contactInvitationWrapper {
+        margin-top: -12rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .contactInvitationWrapper p:nth-child(1) {
+        font-size: 36px;            /* Slightly smaller for small screens */
+        line-height: 1.2;           /* Ensures full letters are visible */
+        margin-bottom: 1rem;
+    }
+
+    .contactInvitationWrapper p:nth-child(2),
+    .contactInvitationWrapper p:nth-child(3),
+    .contactInvitationWrapper p:nth-child(4) {
+        font-size: 14px;
+        line-height: 1;
+        margin-top: -1rem;
+    }
+
+    .social-icons {
+        margin-top: 1.5rem;
+        font-size: 32px;            /* Optional: adjust icon size */
+    }
+
+    .footer {
+        padding: 1rem 0;
+        text-align: center;
+        margin-top: 12em;
+    }
+
+    .footer p:nth-child(1) {
+        font-size: 12px;
+    }
+
+    .footer p:nth-child(2) {
+        font-size: 12px;
+    }
+
+    .footer p:nth-child(3) {
+        font-size: 12px;
+    }
+}

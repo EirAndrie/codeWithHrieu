@@ -1,0 +1,36 @@
+/* style for reveal each text animation */
+.stagger-letters span {
+    opacity: 0;
+    transform: translateY(40px);
+}
+/* end of reveal each text animation */
+
+/* style for each character reveal on scroll */
+p.revealOnScrollEachLetter {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 700;
+    color: #fff;
+    margin: 2rem 0;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+}
+/* Wrap spans - each letter inline-block for transform */
+p.revealOnScrollEachLetter span {
+    display: inline-block;
+    white-space: pre;
+    will-change: transform, opacity;
+}
+/* preserve line-break spacing */
+br {
+    display: block;
+    content: "";
+    margin-bottom: 1rem;
+}
+/* end of each character reveal animation */
+
+/* style for colorScrollText animation */
+.colorScrollText span {
+    color: #333;
+    transition: color 0.2s;
+}

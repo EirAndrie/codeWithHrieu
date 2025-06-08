@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Hrieu Andrie</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" a href="styleForAnimation.css">
+        <link rel="stylesheet" a href="style.css">
+    </head>
+
+    <body>
+        <div id="customCursor"></div>
+
+    <!-- Section one contains the greetins, portfolio image and short description -->
+        <section id="Home" class="sectionOne">
+            <header>
+                <p class="websiteTitle revealOnScroll" data-delay="0.2">CodeWithHrieu</p>
+                <button aria-label="Menu" aria-expanded="false" aria-controls="primary-navigation" class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="navButtons" id="primary-navigation">
+                    <li class="revealOnScroll" data-target="Home" data-delay="0.3">Home</li>
+                    <li class="revealOnScroll" data-target="About" data-delay="0.4">About Me</li>
+                    <li class="revealOnScroll" data-target="Projects" data-delay="0.5">Projects</li>
+                    <li class="revealOnScroll" data-target="Contact" data-delay="0.6">Contact</li>
+                </ul>
+            </header> 
+
+            <section class="introductionStatement">
+                <p class="revealOnScroll" data-delay="0.4">Greetings... I'm Hrieu and I'm a</p>
+                <p class="revealOnScrollEachLetter">Web Designer &<br> Developer</p>
+                <p class="revealOnScroll" data-delay="0.4">
+                    I bring ideas to life with code and creativity. I design clean, user-<br>
+                    friendly websites. Every project blends function and style.
+                </p>
+            </section>
+
+            <section class="imageContainer">
+                <img src="media\profileImage.jpg" alt="error fetching image" class="portfolioImage revealOnScroll" data-delay="0.4">
+            </section>
+        </section>
+    <!-- End of Section One -->
+
+
+    
+    <!-- Section two, contains about me title and the about me description -->
+        <section id="About" class="sectionTwo">
+            <section class="aboutMeTitle">
+                <p class="revealOnScrollEachLetter">About Me</p>
+            </section>
+
+                <section class="aboutMeDescription">
+                    <p class="colorScrollText">
+                            Hi! I'm a BSIT student with a passion for building functional
+                            and user-friendly systems. I enjoy working across the full
+                            stack — from designing clean interfaces in Figma to
+                            developing backend logic and database integration, especially
+                            using Java.<br><br><br>
+
+                            One of my full-stack projects was a sales and inventory
+                            system for a bookstore, where I handled everything from UI
+                            design to CRUD operations and database management. I've
+                            also created and deployed a landing page for a personal film
+                            project, combining creativity and code to bring ideas to life on
+                            the web.<br><br><br>
+
+                            I'm always learning, exploring new technologies, and looking
+                            for opportunities to grow as a developer. Whether it's solving
+                            problems or bringing digital ideas to life, I'm excited about
+                            what's next in my journey.
+                    </p>
+                </section>
+        </section>
+
+        <!-- Custom Separator Line Section -->
+            <div class="quoteRow">
+                <div class="customLine revealOnScroll"></div>
+                    <section class="quote revealOnScroll">
+                        <p class="colorScrollText">The best way to get a project done faster is to start sooner. — Jim Highsmith</p>
+                    </section>
+                <div class="customLine revealOnScroll"></div>
+            </div>
+        <!-- End of custom separator -->
+    <!-- End of section 2 -->
+
+            <video id="hoverVideo" autoplay loop muted class="hoverPreview">
+                <source id ="hoverVideoSource" src="media/novelNookProjectDemo.mp4" type="video/mp4">
+            </video>
+
+    <!-- Section 3 My projects section -->
+        <section id="Projects" class="sectionThree">
+            <section class="projectTitle">
+                <p class="revealOnScrollEachLetter">Projects</p>
+            </section>
+            <div class="projectsWrapper"> <!-- Main container for displaying projects -->
+            <!-- First Project -->
+                <div class="projectCard"> <!-- Wrapper or card used to display projects inside the main container for displaying projects -->
+                    <div class="projectInfo">
+                        <p>
+                            <b>Full-Stack Sales & Inventory System (Bookstore)</b><br>
+                            <i>First-Year Capstone Project</i><br><br>
+                        </p>
+                        <p>
+                            Designed and developed a full-stack Java-based sales and inventory<br>
+                            system for a bookstore as a final project during my first year as a BSIT<br>
+                            stuent. Created the user interface design in Figma, implemented both<br>
+                            frontend and backend functionalities including full CRUD operations, and
+                            integrated a database to manage products, sales, and inventory records.
+                        </p>
+                    </div>
+                    <div class="projectDate">April-May 2025</div>
+                </div>
+            <!-- Second Project -->
+                <div class="projectCard"> <!-- Wrapper or card used to display projects inside the main container for displaying projects -->
+                    <div class="projectInfo">
+                        <p>
+                            <b>Web Designer & Developer </b><br>
+                            <i>Senior Year Project</i><br><br>
+                        </p>
+                        <p>
+                            Designed, developed, and deployed a landing page for our school<br>
+                            website as part of our final programming project, hosting it online using<br>
+                            GitHub Pages.
+                        </p>
+                    </div>
+                    <div class="projectDate">April-May 2024</div>
+                </div>
+            <!-- Third Project -->
+                <div class="projectCard"> <!-- Wrapper or card used to display projects inside the main container for displaying projects -->
+                    <div class="projectInfo">
+                        <p>
+                            <b>Web Designer & Developer</b><br>
+                            <i>Personal Project</i><br><br>
+                        </p>
+                        <p>
+                            Designed, developed, and deployed a responsive landing page for our<br>
+                            personal film project to showcase the concept, cast, and teaser content.<br>
+                            Focused on clean UI/UX design, mobile responsiveness, and smooth<br>
+                            user interaction.
+                        </p>
+                    </div>
+                    <div class="projectDate">Febuary-March 2024</div>
+                </div>
+            </div>
+        </section>
+    <!-- End of Projects Section -->
+
+
+
+    <!-- Section 4 Contact Section-->
+        <section id="Contact" class="sectionFour">
+            <section class="contactInvitationWrapper">
+                <p class="revealOnScrollEachLetter">Get In Touch</p>
+                    <p class="revealOnScroll" data-delay="0.4">you're looking to collaborate, need help with a project, or<br></p>
+                    <p class="revealOnScroll" data-delay="0.5">just want to connect — I’m always open to new ideas, conversations,<br></p>
+                    <p class="revealOnScroll" data-delay="0.6">and opportunities.</p>
+
+                <div class="social-icons revealOnScroll" data-delay="0.7">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-upwork"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+            </section>
+
+            <section class="footer">
+                <p>Designed & Built by Hrieu Andrie</p>
+                <p>Built using HTML, CSS, JS, and continuous learning</p>
+                <p>Crafted with passion, purpose, and plenty of coffee :></p>
+            </section>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.38/bundled/lenis.min.js"></script>
+        <script src="styleScript.js"></script>
+    </body>
+</html>
