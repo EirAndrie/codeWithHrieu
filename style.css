@@ -120,7 +120,7 @@ header {
 
     .hamburger {
         display: flex; /* Show hamburger button on mobile */
-        margin-right: 18px;
+        margin-right: 108px;
     }
 
     .navButtons {
