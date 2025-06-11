@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-// end
+
+
 
 //custom cursor background that follows along
 const customCursor = document.getElementById('customCursor');
@@ -135,16 +136,6 @@ ScrollTrigger.matchMedia({
         // video demo reveal on mouse hover
         const hoverVideo = document.getElementById('hoverVideo');
         const hoverVideoSource = document.getElementById('hoverVideoSource');
-
-        const videoSources = [
-            "media/novelNookProjectDemo.mp4",
-            "./SNMMSIProjectDemoVideo.mp4"
-        ];
-
-        const projectUrls = [
-            "",
-            "https://eirandrie.github.io/snmmsi/?fbclid=iwzxh0bgnhzw0cmtaaar0ettpnng2vpm7sxg8xxmucfa830ynn3dexp4_yqi-qb6svusgggjv3aiw_aem_zmfrzwr1bw15mtziexrlcw#Home"
-        ]
 
         let moveHandler = null;
         let currentCardIndex = null;
