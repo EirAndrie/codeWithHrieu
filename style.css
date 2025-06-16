@@ -234,7 +234,7 @@ header {
     .imageContainer {
         overflow: hidden;
         width: 386px;
-        height: 240px;
+        height: 360px;
         margin-left: 14.8rem;
         margin-top: 10px;
     }
@@ -430,7 +430,7 @@ header {
         justify-content: center;
         padding: 0;
         margin-top: 1rem;
-        height: 120rem;
+        height: 128rem;
     }
 
     .projectsWrapper {
@@ -573,7 +573,7 @@ header {
 
 @media (max-width: 480px) { /* Section 4 responsiveness design */
     .sectionFour {
-        margin-top: 16rem;              /* Remove negative margin */
+        margin-top: 18rem;              /* Remove negative margin */
         padding: 3rem 1rem 2rem;    /* Add spacing inside */
         overflow: visible;          /* Ensure content isn't clipped */
         height: auto;
