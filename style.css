@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     font-size: 1rem; /* base font size for scaling */
     height: 100vh;
     overflow-x: hidden;
+    cursor: default;
 }
 
 @media (max-width: 480px) {
@@ -19,6 +21,11 @@ body {
     }
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
 
 #customCursor {
     position: fixed;
@@ -185,16 +192,16 @@ header {
 .imageContainer {
     position: relative;
     width: 33.5rem;
-    height: 36rem;
+    height: 44rem;
     border-radius: 12px;
     right: 14rem;
-    margin: -32rem 0 0 auto;
+    margin: -37rem 0 0 auto;
     margin-right: 0rem;
 }
 
 .portfolioImage {
     width: 33.5rem;
-    height: 36rem;
+    height: 44rem;
     border-radius: 12px;
 }
 
@@ -259,7 +266,7 @@ header {
     color: white;
     font-size: 8.5rem;
     font-weight: 100;
-    margin-top: 18rem;
+    margin-top: 16rem;
 }
 
 .aboutMeDescription {
@@ -356,6 +363,22 @@ header {
     color: #ffff;
     padding-left: 3rem;
     padding-right: 3rem;
+}
+
+.visitOverlay {
+    position: absolute;
+    background: #000;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    transform: translate(-50%, -50%);
+    z-index: 999;
 }
 
 .projectInfo {
@@ -484,7 +507,7 @@ header {
     justify-content: center;
     align-items: center;     /* Center horizontally */
     text-align: center;
-    margin-top: 48rem;
+    margin-top: 68rem;
 }
 
 .contactInvitationWrapper {
@@ -523,8 +546,8 @@ header {
 
 .social-icons a,
 .social-icons a:visited {
-  color: inherit;         
-  text-decoration: none;
+    color: inherit;         
+    text-decoration: none;
 }
 
 /* Footer style */

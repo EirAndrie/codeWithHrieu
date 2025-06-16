@@ -189,6 +189,25 @@ ScrollTrigger.matchMedia({
     }
 });
 
+document.querySelectorAll('.siteLinks').forEach(wrapper => {
+    const overlay = wrapper.querySelector('.visitOverlay');
+
+    wrapper.addEventListener('mousemove', e => {
+        const rect = wrapper.getBoundingClientRect();
+        
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        overlay.style.left = `${x}px`;
+        overlay.style.top = `${y}px`;
+        overlay.style.opacity = '1';
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+        overlay.style.opacity = '0';
+    });
+});
+
 window.addEventListener('load', () => {
     ScrollTrigger.refresh();
 });
